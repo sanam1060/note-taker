@@ -45,7 +45,19 @@ function createNote(body, notesArray) {
 };
 
 function deleteNote(id, notesArray){
-
+ const result = id;
+ if (notesArray[result]) {
+   let index = notesArray.indexOf(notesArray[result]);
+   delete notesArray[result];
+   notesArray.splice(index, 1);
+   fs.writeFileSync(
+     path.join(__dirname, "./db/db.json"),
+     JSON.stringify({ notesArray }, null, 2)
+   );
+   // JSON.stringify({ notes: notesArray }, null, 2)); TO TRY
+   return result;
+ }
+ console.log("deleted successfully!!!");
 };
 
 // GET /notes should return the notes.html file
