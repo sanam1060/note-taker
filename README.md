@@ -5,7 +5,7 @@
 * [Technologies used](#technologies-used)
 * [Usage](#usage)
 * [Installation](#installation)
-* [Link URL to GitHub Repository](#link-URL-to-GitHub-repository)
+* [Link URL of deployed app to Heroku](#link-URL-of-deployed-app-to-Heroku)
 
 ## **_Description of the project_**
 
@@ -22,5 +22,5 @@ Project is created using:
 
 ## **_Installation_**
 
-## **_Link URL to GitHub Repository_**
-https://github.com/sanam1060/note-taker
+## **_Link URL of deployed app to Heroku_**
+https://sanam-note-taker.herokuapp.com
