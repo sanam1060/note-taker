@@ -34,7 +34,7 @@ function findById(id, notesArray) {
   return result;
 }
 
-function createNewNote(body, notesArray) {
+function createNote(body, notesArray) {
   const note = body;
   notesArray.push(note);
   fs.writeFileSync(
@@ -71,7 +71,7 @@ app.get("api/notes/:id", (req, res) => {
 // Create note
 app.post("api/notes", (req, res) => {
   req.body.id = notes.length.toString();
-  const note = createNewNote(req.body, notes);
+  const note = createNote(req.body, notes);
   res.json(note);
 });
 
