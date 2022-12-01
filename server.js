@@ -2,6 +2,7 @@
 const { notes } = require("./db/db.json");
 const express = require("express"); // express.js node package
 const fs = require("fs"); // write to file
+const path = require("path"); // path package for concatenating file paths
 
 // set port; use environment variable setting if available, otherwise use local port 3001
 const PORT = process.env.PORT || 3001;
