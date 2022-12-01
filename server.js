@@ -42,7 +42,11 @@ function createNewNote(body, notesArray) {
     JSON.stringify({ notesArray }, null, 2)
   );
   return note;
-}
+};
+
+function deleteNote(id, notesArray){
+
+};
 
 // GET /notes should return the notes.html file
 app.get("/notes", (req, res) => {
@@ -71,9 +75,11 @@ app.post("api/notes", (req, res) => {
   res.json(note);
 });
 
-// Update note
-
 // Delete note
+app.post('api/notes', (req, res) => {
+  let results = deleteNote(req.params.id, notes);
+  res.json(results);
+});
 
 // GET /* should return the index.html file
 app.get("*", (req, res) => {
